@@ -74,11 +74,7 @@ function jira() {
     else
       echo "Opening issue #$issue"
     fi
-    if [[ "$JIRA_RAPID_BOARD" == "true" ]]; then
-      open_command "${jira_url}/issues/${issue}${url_fragment}"
-    else
-      open_command "${jira_url}/browse/${issue}${url_fragment}"
-    fi
+    open_command "${jira_url}/browse/${issue}${url_fragment}"
   fi
 }
 
